@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="src/patoicon2.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Escolha um número entre 1 e 100:</p>
+        <input type="number" id="chosenNumber" placeholder="Número escolhido" min="1" max="100">
+        <button id="setNumber">Definir Número</button>
+        <div id="game" style="display:none;">
+            <p>Adivinhe o número escolhido!</p>
+            <input type="number" id="guess" placeholder="Seu palpite">
+            <button id="submit">Enviar</button>
+            <p id="message"></p>
+            <button id="restart" style="display:none;">Recomeçar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
