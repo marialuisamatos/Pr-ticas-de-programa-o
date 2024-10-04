@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira de Trabalho</title>
+    <style>
+        body {
+            background-color: purple;
+        }
+        img{
+            width: 200px;
+        }
+        .painel {
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim {
+            height: 40px;
+            width: 60px;
+            background-color: purple;
+            border: 2px solid white; /* Corrigido para definir o estilo da borda */
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: purple;
+            border: 2px solid white; /* Corrigido para definir o estilo da borda */
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Senhora</h1>
+        <img src="src/Jinclt.jpeg" alt="clt">
+        <h2>Aceita trabalhar como CLT?</h2>
+        <button id="sim">Sim!</button>
+        <button onmouseover="fuja()" id="nao">Não!</button>
+    </div>
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao");
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight; // Corrigido para window.innerHeight
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY); // Corrigido para Math.random()
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+</html>
