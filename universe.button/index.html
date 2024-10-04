@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="design.css">
+        <script src="index.js"></script>
+        <title>Login</title>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="https://www.google.com/">Sair</a></li>
+                <li><a href="">Home</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form class="inputlabel">
+                <h1>Login</h1><br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required><br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required><br>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="0" placeholder="Digite sua idade" required><br>
+                <div class="flex">
+                    <button class="btn" type="button" onClick="clique()">
+                        <strong>ENTRAR</strong>
+                        <div id="container-stars">
+                            <div id="stars"></div>
+                        </div>
+                        <div id="glow">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </button>
+                </div>
+            </form>
+        </main>
+        <footer>@2024Isa</footer>
+    </body>
+
+</html>
