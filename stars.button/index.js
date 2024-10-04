@@ -1,0 +1,1 @@
+alert("Você acessou ao site!");
