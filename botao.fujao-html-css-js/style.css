@@ -1,6 +1,9 @@
 body {
     background-color: purple;
 }
+img {
+    width: 200px;
+}
 .painel {
     margin: auto;
     background-color: white;
@@ -15,7 +18,7 @@ body {
     height: 40px;
     width: 60px;
     background-color: purple;
-    border: 2px white;
+    border: 2px solid white;
     border-radius: 10px;
     color: white;
     margin-left: -50px;
@@ -25,7 +28,7 @@ body {
     height: 40px;
     width: 60px;
     background-color: purple;
-    border: 2px white;
+    border: 2px solid white;
     border-radius: 10px;
     color: white;
     margin-left: 10px;
