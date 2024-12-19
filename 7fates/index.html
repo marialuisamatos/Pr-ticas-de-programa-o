@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icons/tigre.png" type="image/x-icon">
+    <title>Jogo de Batalha</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header"> <!-- Adicionando a classe "header" aqui -->
+        <h1>Batalha 7 Fates Chakho</h1>
+        <img src="img/patadetigre.png" alt="pata">
+    </header>
+    <div id="game">
+        <h2 id="player1-header">Escolha sua carta, Jogador 1</h2>
+        <div id="player1-cards" class="cards">
+            <div class="card" data-id="1" onclick="selectCard(1, 'player1')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Hosu.jpeg" alt="Hosu" class="card-img" />
+                        <p>Hosu - Força: 80 | Fraqueza: 40</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Hosu" class="card-img" />
+                        <p>Habilidades especiais: Arqueiro!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="2" onclick="selectCard(2, 'player1')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Zeha5.jpeg" alt="Zeha" class="card-img" />
+                        <p>Zeha - Força: 90 | Fraqueza: 50</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Zeha" class="card-img" />
+                        <p>Habilidades especiais: Pode virar um Tigre/Beom!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="3" onclick="selectCard(3, 'player1')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Dogeon10.jpeg" alt="Dogeon" class="card-img" />
+                        <p>Dogeon - Força: 75 | Fraqueza: 60</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Dogeon" class="card-img" />
+                        <p>Habilidades especiais: Criminoso/Pistoleiro!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="4" onclick="selectCard(4, 'player1')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Haru.jpeg" alt="Haru" class="card-img" />
+                        <p>Haru - Força: 110 | Fraqueza: 30</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Haru" class="card-img" />
+                        <p>Habilidades especiais: Mestre Sábio!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Escolha sua carta, Jogador 2</h2>
+        <div id="player2-cards" class="cards">
+            <div class="card" data-id="1" onclick="selectCard(1, 'player2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Hosu.jpeg" alt="Hosu" class="card-img" />
+                        <p>Hosu - Força: 80 | Fraqueza: 40</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Hosu" class="card-img" />
+                        <p>Habilidades especiais: Arqueiro!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="2" onclick="selectCard(2, 'player2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Zeha5.jpeg" alt="Zeha" class="card-img" />
+                        <p>Zeha - Força: 90 | Fraqueza: 50</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Zeha" class="card-img" />
+                        <p>Habilidades especiais: Pode virar um Tigre/Beom!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="3" onclick="selectCard(3, 'player2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Dogeon.jpeg" alt="Dogeon" class="card-img" />
+                        <p>Dogeon - Força: 75 | Fraqueza: 60</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Dogeon" class="card-img" />
+                        <p>Habilidades especiais: Criminoso/Pistoleiro!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="4" onclick="selectCard(4, 'player2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/Haru.jpeg" alt="Haru" class="card-img" />
+                        <p>Haru - Força: 110 | Fraqueza: 30</p>
+                    </div>
+                    <div class="card-back">
+                        <img src="img/7 Fates Chakho.jpeg" alt="Haru" class="card-img" />
+                        <p>Habilidades especiais: Mestre Sábio!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="fight-button" onclick="fight()">Lutar!</button>
+
+        <div id="result"></div>
+        <div id="score">
+            <p>Jogador 1: <span id="score1">0</span> | Jogador 2: <span id="score2">0</span></p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

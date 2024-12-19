@@ -1,0 +1,231 @@
+/* Resetando margens e preenchimentos para garantir um layout limpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #780e0e; /* Cor de fundo com gradiente */
+}
+
+/* Contêiner para o h1 e a imagem */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+/* Ajuste na imagem para deixá-la muito pequena */
+.header img {
+    width: 30px;           /* Tamanho da imagem */
+    height: auto;          /* Mantém a proporção da imagem */
+}
+
+/* Título */
+h1 {
+    color: #fbfbfb;
+    margin-top: 20px; /* Diminuindo a distância do topo */
+    font-size: 32px;
+}
+
+/* Resto do CSS não alterado */
+
+
+
+h2{
+    color: #ffffff;
+    top: 40px;
+}
+
+/* Usando ID para mover o h2 do Jogador 1 */
+#player1-header {
+    color: #ffffff;
+    margin-top: -12px; /* Ajuste o valor conforme necessário */
+}
+
+p{
+    color: #ffffff;
+}
+/* Resultado */
+#result {
+    margin-top: -800px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Contêiner do jogo */
+#game {
+    margin-top: 10px; /* Ajuste o espaço para que o conteúdo do jogo fique mais compacto */
+}
+
+/* Cartas do jogador */
+.cards {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Diminuindo a margem superior para deixar as cartas mais próximas do título */
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 30px;
+}
+
+/* Cartas individuais */
+.card {
+    perspective: 1000px;
+    margin: 30px 0;
+}
+
+.card-inner {
+    width: 180px;
+    height: 270px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-back {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transform: rotateY(180deg);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.back-text {
+    font-size: 12px;
+    color: #ffffff;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Botão */
+#fight-button {
+    margin-top: -10px; /* Movendo o botão 10px para cima */
+    padding: 14px 28px;
+    font-size: 20px;
+    background-color: #db022d;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#fight-button:hover {
+    background-color: #ff0000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Pontuação */
+#score {
+    position: absolute;  /* Usa o posicionamento absoluto para ficar fixo abaixo do h1 */
+    top: 87px;  /* Ajuste conforme necessário. Alinha logo abaixo do h1 */
+    left: 50%;  /* Centraliza horizontalmente */
+    transform: translateX(-50%);  /* Ajuste fino para garantir centralização perfeita */
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff; /* Cor branca para destacar */
+    margin: 0;  /* Remove margens extras */
+}
+
+#score span {
+    font-weight: 600;
+    color: #ffffff; /* Destaca a pontuação */
+}
+
+
+
+/* Estilo para a carta selecionada */
+.card.selected {
+    border: 5px solid red;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* Media Query para telas menores que 768px (como tablets e celulares) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .card-inner {
+        width: 160px;
+        height: 240px;
+    }
+
+    .card p {
+        font-size: 12px;
+        color: white;
+    }
+
+    #fight-button {
+        margin-top: 40px; /* Menos espaço entre o botão e o conteúdo anterior */
+        padding: 10px 20px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+    #score {
+        font-size: 18px;
+        position: relative;
+        top: -20px; /* Move o elemento para cima */
+        margin-bottom: 20px; /* Pode ser ajustado conforme necessário */
+        color: #fff; /* Cor da pontuação */
+    }
+}
+
+/* Media Query para telas menores que 480px (celulares em modo retrato) */
+@media (max-width: 480px) {
+    .card-inner {
+        width: 140px;
+        height: 210px;
+    }
+
+    #fight-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
