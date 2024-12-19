@@ -1,11 +1,15 @@
 function fuja() {
     var botaoNao = document.getElementById("nao");
     var larguraJanela = window.innerWidth;
-    var alturaJanela = window.innerHeight;  // Corrigido para window.innerHeight
+    var alturaJanela = window.innerHeight;
     var maxX = larguraJanela - botaoNao.offsetWidth;
     var maxY = alturaJanela - botaoNao.offsetHeight;
     var aleatorioX = Math.floor(Math.random() * maxX);
-    var aleatorioY = Math.floor(Math.random() * maxY);  // Corrigido para Math.random()
+    var aleatorioY = Math.floor(Math.random() * maxY);
     botaoNao.style.left = aleatorioX + "px";
     botaoNao.style.top = aleatorioY + "px";
+}
+
+function mostrarMensagem() {
+    alert("Parabéns pobre, você aceitou trabalhar como CLT!");
 }
